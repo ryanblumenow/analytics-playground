@@ -27,7 +27,7 @@ from scipy.spatial.distance import cdist
 import seaborn as sns
 from io import BytesIO
 from statsmodels.formula.api import ols
-import tkinter
+# import tkinter
 import matplotlib
 # matplotlib.use('TkAgg')
 # matplotlib.use('Agg')
