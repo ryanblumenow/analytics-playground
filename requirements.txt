@@ -1,0 +1,23 @@
+pillow
+hydralit
+numpy
+streamlit
+dtale[streamlit]
+pandas
+statsmodels
+scikit-learn
+matplotlib
+scipy
+seaborn
+bioinfokit
+st-click-detector
+streamlit-option-menu
+streamlit-extras
+tk
+# importlib
+#markdown
+streamlit-quill
+streamlit-pandas-profiling
+bokeh
+seaborn
+ppscore
