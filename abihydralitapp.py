@@ -12,7 +12,7 @@ from hlautoanalytics import autoanalytics
 from hlindivmodel import indivmodels
 from PIL import Image
 from functions import *
-# import keyboard
+import keyboard
 import os
 import signal
 import hydralit_components as hl
