@@ -71,7 +71,7 @@ from streamlit.components.v1 import html
 import streamlit.components.v1 as components
 import pandas as pd
 import streamlit as st
-from click_image_copy_from_demo.__init__ import st_click_image
+from .click_image_copy_from_demo.__init__ import st_click_image
 from dtale.views import startup
 from streamlit_quill import st_quill
 # import pandas_profiling
