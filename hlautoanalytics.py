@@ -354,8 +354,8 @@ class autoanalytics(HydraHeadApp):
                     # var1 = df[x].iloc[1:101]
                     # var2 = df[y].iloc[1:101]
 
-                    var1 = df[x].sample(10000)
-                    var2 = df[y].sample(10000)
+                    var1 = df[x].sample(1000)
+                    var2 = df[y].sample(1000)
 
                     st.subheader("Correlation between chosen 2 variables:" + " " + x + " and " + y)
 
@@ -849,7 +849,7 @@ class autoanalytics(HydraHeadApp):
                     chosenvar = "BRAND"
                 chosenvarindex = df.columns.get_loc(chosenvar)
 
-                # X2 = df.iloc[:, 10:11].sample(10000) #subsamping for efficiency and speed
+                # X2 = df.iloc[:, 10:11].sample(1000) #subsamping for efficiency and speed
                 X2 = df.iloc[:, chosenvarindex:chosenvarindex+1].sample(10000, replace=True) # Subsampling for efficiency and speed
 
                 # Find optimal number of clusters

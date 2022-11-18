@@ -368,8 +368,8 @@ class indivmodels(HydraHeadApp):
                     # var1 = df[x].iloc[1:101]
                     # var2 = df[y].iloc[1:101]
 
-                    var1 = df[x].sample(10000)
-                    var2 = df[y].sample(10000)
+                    var1 = df[x].sample(1000)
+                    var2 = df[y].sample(1000)
 
                     st.subheader("Correlation between chosen 2 variables:" + " " + x + " and " + y)
 
@@ -752,8 +752,8 @@ class indivmodels(HydraHeadApp):
                     # dflogreg = df.drop(columns=['BRANDNAME'])
                     dflogreg = df
                     # print(dflogreg.head(5))
-                    ylogreg = dflogreg['BRAND'].sample(10000)
-                    Xlogreg = dflogreg.drop(columns=["BRANDNAME"]).sample(10000) #subsamping for efficiency and speed
+                    ylogreg = dflogreg['BRAND'].sample(1000)
+                    Xlogreg = dflogreg.drop(columns=["BRANDNAME"]).sample(1000) #subsamping for efficiency and speed
                     varnames = dflogreg.columns.values.tolist()
                     Xlogreg, ylogreg = np.array(Xlogreg), np.array(ylogreg)
 
@@ -986,7 +986,7 @@ class indivmodels(HydraHeadApp):
                     chosenvar = "BRAND"
                 chosenvarindex = df.columns.get_loc(chosenvar)
 
-                # X2 = df.iloc[:, 10:11].sample(10000) #subsamping for efficiency and speed
+                # X2 = df.iloc[:, 10:11].sample(1000) #subsamping for efficiency and speed
                 X2 = df.iloc[:, chosenvarindex:chosenvarindex+1].sample(10000, replace=True) # Subsampling for efficiency and speed
 
                 # Find optimal number of clusters
@@ -1670,10 +1670,10 @@ class indivmodels(HydraHeadApp):
 
                     # Scale the features
                     # Separating out the features
-                    # x = df.iloc[:, 1:-1].sample(10000).values #subsampling for efficiency and speed
+                    # x = df.iloc[:, 1:-1].sample(1000).values #subsampling for efficiency and speed
                     x = df.drop([chosenvar, 'BRANDNAME'], axis=1).sample(1000)
                     # Separating out the target
-                    # y = df.iloc[:,0].sample(10000).values #subsampling for efficiency and speed
+                    # y = df.iloc[:,0].sample(1000).values #subsampling for efficiency and speed
                     y = df[chosenvar].sample(1000)
 
                     print(x.shape, y.shape)
