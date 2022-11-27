@@ -76,6 +76,7 @@ from dtale.views import startup
 from streamlit_quill import st_quill
 # import pandas_profiling
 from streamlit_pandas_profiling import st_profile_report
+from pandas_profiling import ProfileReport
 import dataingestion
 from streamlit_option_menu import option_menu
 
@@ -270,18 +271,19 @@ class autoanalytics(HydraHeadApp):
 
                         # st_profile_report(pr)
 
-                        @st.cache(allow_output_mutation=True)
-                        def gen_profile_report(df, *report_args, **report_kwargs):
-                            return df.profile_report(*report_args, **report_kwargs)
+#                         @st.cache(allow_output_mutation=True)
+#                         def gen_profile_report(df, *report_args, **report_kwargs):
+#                             return df.profile_report(*report_args, **report_kwargs)
 
-                        pr = gen_profile_report(df, explorative=True, title="Data profile",
-                        dataset={
-                        "description": "This profiling report shows an overview of the data",
-                        "copyright_holder": "Analytics Playground",
-                        "copyright_year": "2022",
-                        "url": "https://www.ryanblumenow.com"}, vars={"num": {"low_categorical_threshold": 0}} )
+#                         pr = gen_profile_report(df, explorative=True, title="Data profile",
+#                         dataset={
+#                         "description": "This profiling report shows an overview of the data",
+#                         "copyright_holder": "Analytics Playground",
+#                         "copyright_year": "2022",
+#                         "url": "https://www.ryanblumenow.com"}, vars={"num": {"low_categorical_threshold": 0}} )
 
-                        st_profile_report(pr)
+#                         st_profile_report(pr)
+                        st.write(ProfileReport(pr)
 
                 startup(data_id="1", data=df2.sample(15000)) # All records, no OHE
 
