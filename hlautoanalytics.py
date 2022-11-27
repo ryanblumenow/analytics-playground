@@ -269,26 +269,25 @@ class autoanalytics(HydraHeadApp):
 
                         # pr = gen_profile_report(df, explorative=True)
 
-                        # st_profile_report(pr)
+                        st_profile_report(pr)
 
-#                         @st.cache(allow_output_mutation=True)
-#                         def gen_profile_report(df, *report_args, **report_kwargs):
-#                             return df.profile_report(*report_args, **report_kwargs)
+                        @st.cache(allow_output_mutation=True)
+                        def gen_profile_report(df, *report_args, **report_kwargs):
+                            return df.profile_report(*report_args, **report_kwargs)
 
-#                         pr = gen_profile_report(df, explorative=True, title="Data profile",
-#                         dataset={
-#                         "description": "This profiling report shows an overview of the data",
-#                         "copyright_holder": "Analytics Playground",
-#                         "copyright_year": "2022",
-#                         "url": "https://www.ryanblumenow.com"}, vars={"num": {"low_categorical_threshold": 0}} )
+                        pr = gen_profile_report(df, explorative=True, title="Data profile",
+                        dataset={
+                        "description": "This profiling report shows an overview of the data",
+                        "copyright_holder": "Analytics Playground",
+                        "copyright_year": "2022",
+                        "url": "https://www.ryanblumenow.com"}, vars={"num": {"low_categorical_threshold": 0}} )
 
-#                         st_profile_report(pr)
-                        st.write(ProfileReport(pr)
+                        st_profile_report(pr)
 
-#                 startup(data_id="1", data=df2.sample(15000)) # All records, no OHE
+                startup(data_id="1", data=df2.sample(15000)) # All records, no OHE
 
-#                 if get_instance("1") is None:
-#                     startup(data_id="1", data=df.sample(15000))
+                if get_instance("1") is None:
+                    startup(data_id="1", data=df.sample(15000))
 
                 d=get_instance("1")
 
