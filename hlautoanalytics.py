@@ -287,10 +287,10 @@ class autoanalytics(HydraHeadApp):
 
 #                 startup(data_id="1", data=df2.sample(15000)) # All records, no OHE
 
-#                 if get_instance("1") is None:
-#                     startup(data_id="1", data=df.sample(15000))
+                if get_instance("1") is None:
+                    startup(data_id="1", data=df.sample(15000))
 
-#                 d=get_instance("1")
+                d=get_instance("1")
 
                 # webbrowser.open_new_tab('http://localhost:8501/dtale/main/1') # New window/tab
                 # components.html("<iframe src='/dtale/main/1' />", width=1000, height=300, scrolling=True) # Element
