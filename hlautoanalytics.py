@@ -273,7 +273,7 @@ class autoanalytics(HydraHeadApp):
 
                         @st.cache(allow_output_mutation=True)
                         def gen_profile_report(df, *report_args, **report_kwargs):
-                            return df.profile_report(*report_args, **report_kwargs)
+                            return df.sample(100000).profile_report(*report_args, **report_kwargs)
 
                         pr = gen_profile_report(df, explorative=True, title="Data profile",
                         dataset={
