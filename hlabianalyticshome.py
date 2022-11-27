@@ -172,7 +172,7 @@ class abianalytics(HydraHeadApp):
                     # st.session_state.pagechoice = 'auto analytics'
 
                     # self.do_redirect('Automated analytics flow')
-                    st.image('.\Automated flow\Analytics flow 2.png')
+                    st.image('Automated flow\Analytics flow 2.png')
                     st.info("This is the flow we will follow - you can run any individual model from the menu above or click on the 'Automated analytics' tab to start the guided process.")
                     
                     # switch_page('hlautoanalytics')
