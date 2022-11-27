@@ -28,7 +28,7 @@ if __name__ == '__main__':
         st.session_state['pagechoice'] = 'analytics'
 
     #this is the host application, we add children to it and that's it!
-    app = HydraApp(title='ABI Analytics', favicon="dartico.jpg", hide_streamlit_markers=False, layout='wide', navbar_mode='sticky') #, navbar_sticky=True, navbar_mode='sticky', use_navbar=True)
+    app = HydraApp(title='ABI Analytics', favicon="dartico.jpg", hide_streamlit_markers=False, layout='wide', navbar_sticky=True) #, navbar_sticky=True, navbar_mode='sticky', use_navbar=True)
 
     # To eliminate space at top of page
 
